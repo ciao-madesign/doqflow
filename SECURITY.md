@@ -17,6 +17,7 @@
 | S6 | Ogni invio al cloud è **registrato** (cosa, a chi, perché, chi ha confermato) |
 | S7 | Gli agenti non accedono al database, non eseguono comandi, non pubblicano e non modificano permessi |
 | S9 | Password robuste (lunghezza minima, controllo contro password banali); **2FA opzionale per utente**, che l'Administrator può rendere obbligatoria per ruoli sensibili (es. Technical Reviewer) |
+| S10 | Cifratura a riposo: **cifratura del disco/volume a livello di installazione**, raccomandata e documentata nella guida di installazione, non gestita da DoqFlow nell'MVP. Cifratura applicativa o con chiave del cliente da valutare solo su richiesta |
 | S8 | Isolamento dei progetti con controllo per riga in PostgreSQL (vedi `DATABASE.md` §7) |
 
 ---
@@ -102,6 +103,7 @@ Le fonti caricate possono contenere testo che tenta di dare istruzioni al modell
 - I file originali non si modificano mai; l'hash ne garantisce l'integrità.
 - Isolamento dei file per progetto nel filesystem.
 - Strumenti esterni (Tesseract, DITA-OT, Pandoc) eseguiti con permessi minimi e senza rete.
+- Cifratura a riposo affidata al disco/volume (S10); la guida di installazione la raccomanda.
 - Credenziali dei provider cloud cifrate e mai riportate negli output degli agenti o nei log.
 
 ---
@@ -142,7 +144,6 @@ Le fonti caricate possono contenere testo che tenta di dare istruzioni al modell
 
 | ID | Domanda |
 |---|---|
-| E2 | Cifratura dei dati a riposo (database e file): predefinita o opzionale |
 | E3 | Conservazione dei registri di audit (durata) |
 | E4 | Esposizione in rete: solo rete locale, o anche accesso remoto protetto |
 | E5 | Se l'invio al cloud debba bloccare per default alcune fonti marcate "riservate" (da valutare dopo l'MVP) |
