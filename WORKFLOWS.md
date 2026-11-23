@@ -15,6 +15,7 @@
 | W4 | Ordine dei controlli: **prima i validatori in Python, poi i reviewer AI** |
 | W5 | Lo stato dei workflow è salvato su PostgreSQL e **sopravvive al riavvio** |
 | W6 | Il Supervisor è logica fissa in Python (vedi `AGENTS.md` §8) |
+| W8 | I promemoria sono **solo in-app** (dashboard ed elenco attività) nell'MVP |
 | W7 | Tutti i gate di contenuto (G1, G2, G3) sono approvati da un **Technical Reviewer umano**; il Project Manager gestisce il processo e riceve i promemoria |
 
 ---
@@ -164,7 +165,7 @@ Se il blocco era già approvato in un gate, l'approvazione viene marcata **decad
 
 | ID | Domanda |
 |---|---|
-| C1 | Frequenza e canale dei promemoria (solo in-app, o anche email) |
+| C1 | Frequenza dei promemoria (il canale è solo in-app nell'MVP; l'email è un'estensione futura) |
 | C2 | Quali blocchi "collegati" fanno ripartire i validatori dopo una correzione (soglia della regressione) |
 | C4 | Cosa succede ai blocchi già approvati se si riapre una fase precedente |
 | C5 | Diagrammi formali degli stati (da aggiungere quando il flusso è stabile) |
