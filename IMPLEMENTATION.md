@@ -11,7 +11,7 @@
 |---|---|
 | I1 | Ordine di costruzione: **per strati, partendo dal nucleo** (backend, database, accesso, workflow con agente finto), poi funzioni, poi interfaccia completa |
 | I2 | Lo sviluppo è affidato ad **agenti di coding guidati da questi documenti**, con compiti piccoli, criteri di accettazione e test da superare |
-| I3 | Materiale di prova: **documenti pubblici di un prodotto industriale** + **documenti sintetici creati apposta** (con errori e contraddizioni note) |
+| I3 | Materiale di prova: **documenti pubblici** (un inverter o azionamento + una macchina o componente meccanico, per coprire dati elettrici e procedure di montaggio/manutenzione) + **documenti sintetici creati apposta** (con errori e contraddizioni note) |
 | I4 | Prima di scrivere codice per un compito, l'agente di coding rilegge il documento di riferimento; se trova un conflitto o un vuoto, **si ferma e lo segnala**, senza decidere da solo |
 | I5 | Nessuna nuova tecnologia oltre allo stack definito (vedi `ARCHITECTURE.md` §12) |
 
@@ -153,7 +153,7 @@ Ordine per strati (I1): M0 e M1 costruiscono il nucleo e fanno emergere presto i
 
 | Materiale | Scopo |
 |---|---|
-| **Documenti pubblici** di un prodotto industriale (es. manuale e scheda tecnica di un inverter o PLC) | Prova realistica di importazione ed estrazione |
+| **Documenti pubblici** di un inverter/azionamento e di una macchina o componente meccanico (manuali e schede tecniche) | Prova realistica di importazione ed estrazione, con dati elettrici e procedure meccaniche |
 | **Documenti sintetici** creati apposta | Contengono errori e contraddizioni noti: permettono di misurare cosa il sistema rileva e cosa no |
 
 Il dataset sintetico deve includere almeno: un valore tecnico contraddittorio tra due fonti, un'unità di misura errata, un riferimento incrociato rotto, una fonte obsoleta e un'avvertenza di sicurezza.
@@ -189,7 +189,7 @@ L'architettura è predisposta per aggiungerli senza ristrutturazioni.
 
 | ID | Domanda |
 |---|---|
-| F1 | Scelta del prodotto industriale pubblico per i documenti di prova |
+| F1 | Scelta dei documenti pubblici precisi: categoria decisa (inverter/azionamento **e** macchina o componente meccanico come pompa o riduttore), restano da scegliere i prodotti e verificarne la licenza di riuso |
 | F2 | Quali modelli Ollama usare di default (da decidere con prove sul dataset, `AGENTS.md` B2) |
 | F3 | Schemi JSON esatti per ciascun ruolo (`AGENTS.md` B1), da fissare in M1-5 |
 | F4 | Hardware minimo e raccomandato per l'installazione predefinita |
