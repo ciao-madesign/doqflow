@@ -16,6 +16,7 @@
 | S5 | Avviso: **conferma esplicita a ogni invio che include più di un blocco**, con elenco di cosa esce e verso quale provider. I singoli blocchi usano l'autorizzazione di progetto |
 | S6 | Ogni invio al cloud è **registrato** (cosa, a chi, perché, chi ha confermato) |
 | S7 | Gli agenti non accedono al database, non eseguono comandi, non pubblicano e non modificano permessi |
+| S9 | Password robuste (lunghezza minima, controllo contro password banali); **2FA opzionale per utente**, che l'Administrator può rendere obbligatoria per ruoli sensibili (es. Technical Reviewer) |
 | S8 | Isolamento dei progetti con controllo per riga in PostgreSQL (vedi `DATABASE.md` §7) |
 
 ---
@@ -39,6 +40,8 @@ I permessi si applicano **per progetto**: un utente può avere ruoli diversi in 
 - Account creati dall'Administrator; password conservate solo come hash robusto con sale.
 - Sessioni con scadenza e possibilità di revoca.
 - Blocco temporaneo dopo tentativi falliti ripetuti.
+- Password robuste: lunghezza minima e controllo contro password banali.
+- **2FA opzionale** per ogni utente; l'Administrator può renderla obbligatoria per ruoli sensibili (per esempio i Technical Reviewer che firmano gate e blocchi di sicurezza).
 - **Predisposizione a SSO/LDAP:** l'autenticazione è un modulo sostituibile; ruoli, permessi e audit dipendono dall'identità dell'utente, non dal modo in cui ha effettuato l'accesso.
 
 ---
@@ -139,7 +142,6 @@ Le fonti caricate possono contenere testo che tenta di dare istruzioni al modell
 
 | ID | Domanda |
 |---|---|
-| E1 | Politica delle password e autenticazione a due fattori (obbligatoria, opzionale, solo con SSO) |
 | E2 | Cifratura dei dati a riposo (database e file): predefinita o opzionale |
 | E3 | Conservazione dei registri di audit (durata) |
 | E4 | Esposizione in rete: solo rete locale, o anche accesso remoto protetto |
