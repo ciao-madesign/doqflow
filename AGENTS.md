@@ -101,7 +101,7 @@ Il Reviewer deve usare un modello **diverso** dal Writer.
 | Un solo modello disponibile | Il sistema **avvisa e continua**: la revisione è marcata **"non indipendente"** nel report e richiede la conferma dell'umano al gate |
 | Comando umano esplicito | Si può passare alla **modalità prompt differenziato**: stesso modello, ma istruzioni e parametri diversi per il Reviewer |
 
-La modalità prompt differenziato è un'eccezione scelta dall'umano, registrata nell'audit e indicata nel report di revisione.
+La modalità prompt differenziato è un'eccezione scelta dall'umano **per singolo progetto** (impostazione di progetto), registrata nell'audit e indicata in ogni report di revisione.
 Il sistema non la attiva da solo.
 
 ---
@@ -152,4 +152,3 @@ Nota: nell'MVP la struttura del manuale (P01) è proposta dal Source Analyst e d
 |---|---|
 | B1 | Schemi JSON esatti per ciascun ruolo (da fissare in `IMPLEMENTATION.md`) |
 | B2 | Quali modelli Ollama usare di default per Writer e Reviewer |
-| B3 | Come si abilita la modalità "prompt differenziato" (impostazione di progetto o per singola revisione) |
