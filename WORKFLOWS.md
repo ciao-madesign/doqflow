@@ -19,6 +19,7 @@
 | W8 | I promemoria sono **solo in-app** (dashboard ed elenco attività) nell'MVP |
 | W9 | Riapertura di una fase: i blocchi già approvati restano tali. I **validatori in Python rigirano sull'intero documento**; i **reviewer AI rivedono solo i blocchi modificati** o toccati dalle nuove issue |
 | W10 | Dopo una correzione, la regressione ricontrolla il blocco corretto e i blocchi che **condividono la stessa fonte o un riferimento incrociato** con esso (tramite tracciabilità) |
+| W11 | Il **gate finale** (pubblicazione) è approvato dal **Project Manager**: il contenuto è già stato approvato dal Technical Reviewer al G3. Il doppio passaggio può diventare configurabile in futuro |
 
 ---
 
@@ -131,7 +132,7 @@ Ciclo:
 | G1 | Technical Reviewer | Completezza fonti, contraddizioni risolte |
 | G2 | Technical Reviewer | Struttura del manuale |
 | G3 | Technical Reviewer | Versione master inglese |
-| Finale | Persona autorizzata | Pacchetto di pubblicazione |
+| Finale | Project Manager | Completezza del pacchetto e autorizzazione alla pubblicazione |
 
 Regole:
 
