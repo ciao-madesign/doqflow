@@ -182,13 +182,14 @@ Se cambia una fonte, il sistema individua i blocchi interessati (base della futu
 - Provider iniziali: **Ollama** (obbligatorio per D3). OpenAI, Anthropic, Gemini attivabili per configurazione.
 - Regole di instradamento per tipo di attività: classificazione, estrazione e controllo linguistico in locale; analisi complessa, redazione e traduzione in locale o cloud secondo policy.
 - Budget per progetto e per agente, limiti di token e iterazioni, registro dei consumi.
-- Policy cloud: il cloud non accede mai a file o database. Prima di ogni invio: autorizzazione, minimizzazione dei dati, registrazione.
+- Policy cloud: disattivato per default, abilitato per progetto dall'Administrator. Il cloud non accede mai a file o database. Prima di ogni invio: autorizzazione, avviso con conferma esplicita (se l'invio include più di un blocco; sono ammessi anche interi documenti) e registrazione. Dettagli in `SECURITY.md`.
 - **Con cloud disabilitato nessuna funzione smette di funzionare** (può essere più lenta o meno accurata).
 
 ---
 
 ## 9. Sicurezza
 
+- Autenticazione: utenti locali nell'MVP, progettata per passare a SSO/LDAP senza riscrivere ruoli e audit.
 - Ruoli umani: Administrator, Project Manager, Technical Reviewer, Writer, Viewer.
 - Agenti: leggono solo le fonti assegnate, scrivono solo nei blocchi autorizzati, nessun accesso al database, nessun comando arbitrario, nessuna pubblicazione.
 - Protezione da prompt injection nei documenti caricati: il contenuto delle fonti è sempre trattato come dato, mai come istruzione.
@@ -246,7 +247,6 @@ Fuori dall'MVP: traduzione, DITA, integrazioni CCMS/PLM/Git, agenti aggiuntivi.
 |---|---|
 | A1 | Formato esatto del pacchetto di scambio con DoqTool (campi dei metadati, manifest) |
 | A2 | Quali modelli locali garantiscono qualità sufficiente per redazione e review? Serve un dataset di valutazione |
-| A3 | Autenticazione: utenti locali nell'MVP, SSO/LDAP in seguito? |
 | A4 | Lingue della documentazione: solo inglese come master, o anche italiano? |
 | A5 | Modello commerciale e licenza (come DoqTool: licenza locale perpetua?) |
 | A6 | Nome definitivo dei moduli e della versione (V1 / MVP) |
