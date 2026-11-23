@@ -113,7 +113,8 @@ Ogni modulo espone un'interfaccia documentata ed è testabile da solo.
 - Quattro categorie: **Worker**, **Reviewer**, **Validator**, **Supervisor**.
 - Ruoli (non modelli distinti) configurati in YAML: input, strumenti, permessi, formato di output, limiti.
 - Un Reviewer non modifica il documento. Un Validator non può ignorare una regola fallita. Un Supervisor non autorizza rilasci riservati all'umano.
-- Il **reviewer indipendente** usa un modello diverso dal writer.
+- Il **reviewer indipendente** usa un modello diverso dal writer. Se è disponibile un solo modello, la revisione è marcata "non indipendente" e richiede conferma umana; su comando umano si può usare la modalità a prompt differenziato.
+- Solo l'Administrator modifica prompt e permessi (con versione e audit). Prompt in inglese, output solo JSON validato, fino a 3 tentativi.
 
 ### 5.1 Ruoli dell'MVP
 
@@ -123,11 +124,13 @@ Ogni modulo espone un'interfaccia documentata ed è testabile da solo.
 | Technical Writer | Worker |
 | Technical Reviewer | Reviewer |
 | Language Reviewer | Reviewer |
+| Safety Reviewer | Reviewer |
 | Validatori in Python (numerici, unità, struttura, riferimenti) | Validator |
-| Orchestratore del ciclo | Supervisor |
+| Orchestratore del ciclo (logica fissa in Python, non AI) | Supervisor |
 
-Gli altri ruoli della specifica (Safety, Standards, Peer indipendente, Localization, Release) arrivano nelle milestone successive,
-senza modificare l'architettura.
+I blocchi di sicurezza richiedono sempre la revisione umana dedicata.
+Gli altri ruoli della specifica (Standards, Peer indipendente, Localization, Release) arrivano nelle milestone successive,
+senza modificare l'architettura. Dettagli in `AGENTS.md`.
 
 ---
 
