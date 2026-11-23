@@ -15,10 +15,10 @@
 | W4 | Ordine dei controlli: **prima i validatori in Python, poi i reviewer AI** |
 | W5 | Lo stato dei workflow è salvato su PostgreSQL e **sopravvive al riavvio** |
 | W6 | Il Supervisor è logica fissa in Python (vedi `AGENTS.md` §8) |
-| W10 | Dopo una correzione, la regressione ricontrolla il blocco corretto e i blocchi che **condividono la stessa fonte o un riferimento incrociato** con esso (tramite tracciabilità) |
-| W9 | Riapertura di una fase: i blocchi già approvati restano tali. I **validatori in Python rigirano sull'intero documento**; i **reviewer AI rivedono solo i blocchi modificati** o toccati dalle nuove issue |
-| W8 | I promemoria sono **solo in-app** (dashboard ed elenco attività) nell'MVP |
 | W7 | Tutti i gate di contenuto (G1, G2, G3) sono approvati da un **Technical Reviewer umano**; il Project Manager gestisce il processo e riceve i promemoria |
+| W8 | I promemoria sono **solo in-app** (dashboard ed elenco attività) nell'MVP |
+| W9 | Riapertura di una fase: i blocchi già approvati restano tali. I **validatori in Python rigirano sull'intero documento**; i **reviewer AI rivedono solo i blocchi modificati** o toccati dalle nuove issue |
+| W10 | Dopo una correzione, la regressione ricontrolla il blocco corretto e i blocchi che **condividono la stessa fonte o un riferimento incrociato** con esso (tramite tracciabilità) |
 
 ---
 
@@ -57,7 +57,7 @@ Traduzione e DITA sono fuori dall'MVP; il flusso è predisposto per inserirli tr
 - **Gate G1:** l'umano conferma completezza delle fonti e delle informazioni critiche.
 
 ### Fase 2 — Pianificazione
-- Si propone struttura, indice, contenuti obbligatori, fonti associate, tabelle e immagini necessarie.
+- Il Writer, con il Source Analyst, propone struttura, indice, contenuti obbligatori, fonti associate, tabelle e immagini necessarie (il ruolo Document Architect P01 è previsto dopo l'MVP).
 - Il Document Manager crea i blocchi con ID persistente.
 - **Gate G2:** l'umano approva la struttura prima della redazione.
 
@@ -78,7 +78,7 @@ Un blocco che non supera i validatori non arriva ai reviewer AI.
 **Gate G3:** l'umano approva la versione master inglese. Se la revisione è marcata "non indipendente", la conferma è esplicita.
 
 ### Fase 5 — Pubblicazione
-- Il Release Manager genera Markdown e PDF.
+- Il sistema (modulo Document Manager) genera Markdown e PDF. L'agente Release Manager (D03) è previsto nelle milestone successive.
 - Controlli finali sui formati e pacchetto con documenti, metadati, versioni, report QA, approvazioni, registro delle modifiche.
 - **Gate finale:** approvazione umana della pubblicazione.
 

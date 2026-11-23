@@ -16,9 +16,9 @@
 | S5 | Avviso: **conferma esplicita a ogni invio che include più di un blocco**, con elenco di cosa esce e verso quale provider. I singoli blocchi usano l'autorizzazione di progetto |
 | S6 | Ogni invio al cloud è **registrato** (cosa, a chi, perché, chi ha confermato) |
 | S7 | Gli agenti non accedono al database, non eseguono comandi, non pubblicano e non modificano permessi |
+| S8 | Isolamento dei progetti con controllo per riga in PostgreSQL (vedi `DATABASE.md` §7) |
 | S9 | Password robuste (lunghezza minima, controllo contro password banali); **2FA opzionale per utente**, che l'Administrator può rendere obbligatoria per ruoli sensibili (es. Technical Reviewer) |
 | S10 | Cifratura a riposo: **cifratura del disco/volume a livello di installazione**, raccomandata e documentata nella guida di installazione, non gestita da DoqFlow nell'MVP. Cifratura applicativa o con chiave del cliente da valutare solo su richiesta |
-| S8 | Isolamento dei progetti con controllo per riga in PostgreSQL (vedi `DATABASE.md` §7) |
 
 ---
 

@@ -164,8 +164,8 @@ Nota: le soglie sui casi critici non sostituiscono la revisione umana, che resta
 
 | ID | Domanda |
 |---|---|
-| G1 | Valore esatto del minimo sui casi critici (da fissare dopo la prima misura) |
-| G2 | Margine accettabile per la regressione delle metriche |
-| G3 | Dimensioni del dataset sintetico (numero di documenti ed errori per categoria) |
-| G4 | Se aggiungere una revisione a campione da parte di un esperto dopo l'MVP |
-| G5 | Strumento e frequenza di esecuzione automatica dei test (`IMPLEMENTATION.md` F5) |
+| TP1 | Valore esatto del minimo sui casi critici (da fissare dopo la prima misura) |
+| TP2 | Margine accettabile per la regressione delle metriche |
+| TP3 | Dimensioni del dataset sintetico (numero di documenti ed errori per categoria) |
+| TP4 | Se aggiungere una revisione a campione da parte di un esperto dopo l'MVP |
+| TP5 | Strumento e frequenza di esecuzione automatica dei test (`IMPLEMENTATION.md` F5) |

@@ -9,13 +9,13 @@
 
 | # | Decisione |
 |---|---|
-| G1 | Prompt e istruzioni degli agenti sono scritti in **inglese** |
-| G2 | Ogni agente produce **solo JSON strutturato**, validato dal sistema prima dell'uso |
-| G3 | Output non valido: **fino a 3 tentativi**, poi il compito si ferma e viene segnalato all'umano |
-| G4 | Il Supervisor è **logica fissa in Python**, non un agente AI |
-| G5 | Solo l'**Administrator** modifica prompt, permessi e configurazioni; ogni modifica crea una nuova versione con audit |
-| G6 | Indipendenza della revisione: vedi §6 |
-| G7 | I blocchi di sicurezza richiedono sempre la revisione umana dedicata, firmata da un Technical Reviewer umano (§7) |
+| AG1 | Prompt e istruzioni degli agenti sono scritti in **inglese** |
+| AG2 | Ogni agente produce **solo JSON strutturato**, validato dal sistema prima dell'uso |
+| AG3 | Output non valido: **fino a 3 tentativi** (per singola risposta dell'agente), poi il compito si ferma e viene segnalato all'umano. Da non confondere con il limite di 3 cicli di correzione di un'issue (vedi `WORKFLOWS.md` §5) |
+| AG4 | Il Supervisor è **logica fissa in Python**, non un agente AI |
+| AG5 | Solo l'**Administrator** modifica prompt, permessi e configurazioni; ogni modifica crea una nuova versione con audit |
+| AG6 | Indipendenza della revisione: vedi §6 |
+| AG7 | I blocchi di sicurezza richiedono sempre la revisione umana dedicata, firmata da un Technical Reviewer umano (§7) |
 
 ---
 
@@ -123,7 +123,7 @@ Regole sulla base dello stato, senza AI:
 |---|---|
 | Issue Critical o Major aperte | Non si può procedere; correzione richiesta |
 | Correzione eseguita | Nuova verifica indipendente prima della chiusura |
-| Tentativi del ciclo esauriti (default 3) | Sospensione e segnalazione all'umano |
+| Cicli di correzione esauriti (default 3) | Sospensione e segnalazione all'umano |
 | Tutte le verifiche superate | Si passa al gate umano |
 | Revisione marcata "non indipendente" | Conferma esplicita al gate |
 | Blocco di sicurezza | Revisione umana dedicata |

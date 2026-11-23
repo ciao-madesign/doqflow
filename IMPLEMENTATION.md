@@ -13,8 +13,8 @@
 | I2 | Lo sviluppo è affidato ad **agenti di coding guidati da questi documenti**, con compiti piccoli, criteri di accettazione e test da superare |
 | I3 | Materiale di prova: **documenti pubblici** (un inverter o azionamento + una macchina o componente meccanico, per coprire dati elettrici e procedure di montaggio/manutenzione) + **documenti sintetici creati apposta** (con errori e contraddizioni note) |
 | I4 | Prima di scrivere codice per un compito, l'agente di coding rilegge il documento di riferimento; se trova un conflitto o un vuoto, **si ferma e lo segnala**, senza decidere da solo |
-| I6 | Hardware minimo dichiarato per l'installazione predefinita: **16 GB di RAM, 8 core, GPU opzionale** (PostgreSQL, backend e un modello Ollama da 7–8 miliardi di parametri quantizzato). Da confermare con le prove di M4 |
 | I5 | Nessuna nuova tecnologia oltre allo stack definito (vedi `ARCHITECTURE.md` §12) |
+| I6 | Hardware minimo dichiarato per l'installazione predefinita: **16 GB di RAM, 8 core, GPU opzionale** (PostgreSQL, backend e un modello Ollama da 7–8 miliardi di parametri quantizzato). Da confermare con le prove di M4 |
 
 ---
 

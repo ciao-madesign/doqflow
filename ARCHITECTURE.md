@@ -9,12 +9,12 @@
 
 | # | Decisione | Conseguenza |
 |---|---|---|
-| D1 | DoqFlow è un **prodotto separato** da DoqTool | Repository, stack e ciclo di rilascio indipendenti |
-| D2 | Target: **PMI** (come DoqTool) + realtà più grandi | Installazione semplice di default, funzioni enterprise come moduli attivabili |
-| D3 | **Cloud AI opzionale**, mai obbligatorio | Il sistema deve funzionare end-to-end con il solo Ollama locale |
-| D4 | **Markdown** è il formato master interno | PDF, HTML e DITA sono output generati |
-| D5 | **Monolite modulare**, nessun microservizio | Un solo backend, moduli con confini chiari |
-| D6 | Collaborazione con DoqTool tramite **file di scambio**, non tramite codice condiviso | Nessuna dipendenza tecnica diretta tra i due prodotti |
+| AR1 | DoqFlow è un **prodotto separato** da DoqTool | Repository, stack e ciclo di rilascio indipendenti |
+| AR2 | Target: **PMI** (come DoqTool) + realtà più grandi | Installazione semplice di default, funzioni enterprise come moduli attivabili |
+| AR3 | **Cloud AI opzionale**, mai obbligatorio | Il sistema deve funzionare end-to-end con il solo Ollama locale |
+| AR4 | **Markdown** è il formato master interno | PDF, HTML e DITA sono output generati |
+| AR5 | **Monolite modulare**, nessun microservizio | Un solo backend, moduli con confini chiari |
+| AR6 | Collaborazione con DoqTool tramite **file di scambio**, non tramite codice condiviso | Nessuna dipendenza tecnica diretta tra i due prodotti |
 
 ---
 
@@ -179,7 +179,7 @@ Se cambia una fonte, il sistema individua i blocchi interessati (base della futu
 ## 8. Model Router
 
 - Interfaccia comune per tutti i provider (generazione, consumi, informazioni sul modello).
-- Provider iniziali: **Ollama** (obbligatorio per D3). OpenAI, Anthropic, Gemini attivabili per configurazione.
+- Provider iniziali: **Ollama** (obbligatorio per AR3). OpenAI, Anthropic, Gemini attivabili per configurazione.
 - Regole di instradamento per tipo di attività: classificazione, estrazione e controllo linguistico in locale; analisi complessa, redazione e traduzione in locale o cloud secondo policy.
 - Budget per progetto e per agente, limiti di token e iterazioni, registro dei consumi.
 - Policy cloud: disattivato per default, abilitato per progetto dall'Administrator. Il cloud non accede mai a file o database. Prima di ogni invio: autorizzazione, avviso con conferma esplicita (se l'invio include più di un blocco; sono ammessi anche interi documenti) e registrazione. Dettagli in `SECURITY.md`.
