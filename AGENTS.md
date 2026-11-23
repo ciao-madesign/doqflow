@@ -15,7 +15,7 @@
 | G4 | Il Supervisor è **logica fissa in Python**, non un agente AI |
 | G5 | Solo l'**Administrator** modifica prompt, permessi e configurazioni; ogni modifica crea una nuova versione con audit |
 | G6 | Indipendenza della revisione: vedi §6 |
-| G7 | I blocchi di sicurezza richiedono sempre la revisione umana dedicata (§7) |
+| G7 | I blocchi di sicurezza richiedono sempre la revisione umana dedicata, firmata da un Technical Reviewer umano (§7) |
 
 ---
 
@@ -111,7 +111,7 @@ Il sistema non la attiva da solo.
 - Ogni blocco che contiene avvertenze o istruzioni di sicurezza è marcato **"sicurezza"**.
 - Il Safety Reviewer (R04) lo verifica.
 - Anche se tutti i reviewer AI lo approvano, il blocco richiede **sempre la revisione umana dedicata** da parte di una persona autorizzata.
-- Nessun blocco di sicurezza si chiude automaticamente.
+- La firma spetta a un **Technical Reviewer umano** autorizzato. Nessun blocco di sicurezza si chiude automaticamente.
 
 ---
 
@@ -153,4 +153,3 @@ Nota: nell'MVP la struttura del manuale (P01) è proposta dal Source Analyst e d
 | B1 | Schemi JSON esatti per ciascun ruolo (da fissare in `IMPLEMENTATION.md`) |
 | B2 | Quali modelli Ollama usare di default per Writer e Reviewer |
 | B3 | Come si abilita la modalità "prompt differenziato" (impostazione di progetto o per singola revisione) |
-| B4 | Chi può firmare la revisione umana dei blocchi di sicurezza (ruolo dedicato o Technical Reviewer) |
